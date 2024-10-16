@@ -12,7 +12,9 @@ public class Main {
 		try {			
 			//Carga de los datos desde la BBDD
 			DBManager dbManager = new DBManager();
-			dbManager.connect();			
+			dbManager.connect();
+			
+			//Este warning es debido a que el método getAllLaunches() devuelve un List de RocketLaunch
 			List<RocketLaunch> launches = dbManager.getAllLaunches();
 			dbManager.disconnect();
 						
